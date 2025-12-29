@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+<header><a href="index.html">Home</a></header>
+
+<section>
+  <h2>Register</h2>
+
+  <form onsubmit="sendWA();return false;">
+    <input placeholder="Name" id="n" required><br><br>
+    <input placeholder="Company" id="c" required><br><br>
+    <input placeholder="WhatsApp +CountryCode" id="w" required><br><br>
+
+    <select id="r">
+      <option>Buyer</option>
+      <option>Seller</option>
+      <option>Both</option>
+    </select><br><br>
+
+    <button class="btn">Register via WhatsApp</button>
+  </form>
+</section>
+
+<script>
+function sendWA(){
+  let msg = "New Registration%0AName:"+n.value+"%0ACompany:"+c.value+"%0AWhatsApp:"+w.value+"%0ARole:"+r.value;
+  window.open("https://wa.me/971XXXXXXXXX?text="+msg);
+}
+</script>
+
+<footer>© 2025 Rajas Gulf Trading Company</footer>
+</body>
+</html>
